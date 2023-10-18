@@ -1,0 +1,398 @@
+:root {
+	--rojo: #E50914;
+	--fondo: #141414;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fondo);
+	/*: linear-gradient(0deg, rgba(43,187,65,1) 0%, rgba(43,187,134,1) 7%, rgba(43,169,187,1) 19%, rgba(43,102,187,1) 39%, rgba(43,61,187,1) 54%, rgba(46,34,159,1) 69%, rgba(32,23,116,1) 83%, rgba(26,18,98,1) 93%, rgba(16,9,65,0.9984202211690363) 100%);
+	*/font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+div .logo {
+	width: 100px;
+}
+
+header {
+	padding: 30px 0;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+}
+
+header nav a {
+	color: #AAA;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+	color: #FFF;
+}
+
+/*-----------------Menú de perfil ---------------------*/
+#menu ul li {
+	background-color: #00000063;
+}
+
+#menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+#menu ul a {
+	display:block;
+	color:#fff;
+	text-decoration:none;
+	font-weight:normal;
+	text-align: center;
+	font-size:15px;
+	padding:10px;
+	font-family:'Bebas Neue', cursive;
+	/*text-transform:uppercase;*/
+	letter-spacing:1px;
+  }
+  
+  #menu ul li {
+	position:relative;
+	float:left;
+	margin:0;
+	padding:0;
+  }
+  
+  #menu ul li:hover {
+	background:#c7c9cba6;
+  }
+  
+  #menu ul ul {
+	display:none;
+	position:absolute;
+	top:100%;
+	left:0;
+	padding:0;
+  }
+  
+  #menu ul ul li {
+	float:none;
+	width:150px
+  }
+  
+  #menu ul ul a {
+	line-height:120%;
+	padding:10px 15px;
+  }
+  
+  #menu ul li:hover > ul {
+	display:block;
+  }
+
+
+/* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+.pelicula-principal {
+	font-size: 16px;
+	min-height: 40.62em;
+	color: #fff;
+	/*../view/user/img/backdrop.jpg*/
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(https://www.abc.es/media/peliculas/000/023/769/el-fantasma-de-la-opera-2.jpg);
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: end;
+}
+
+.pelicula-principal .contenedor {
+	margin: 0 auto;
+	margin-bottom: 6.25em;
+}
+
+.pelicula-principal .titulo {
+	font-weight: 600;
+	font-size: 3.12em;
+	margin-bottom: 0.4em;
+}
+
+.pelicula-principal .descripcion {
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.75em;
+	max-width: 50%;
+	margin-bottom: 1.25em;
+	margin-top: 1.25em;
+}
+
+.pelicula-principal span {
+	max-width: 70%;
+}
+
+.pelicula-principal .Detalles{
+	font-weight: normal;
+	font-size: 13px;
+	margin-bottom: 1.25em;
+	line-height: 1.75em;
+	max-width: 100%;
+	text-align: right;
+}
+
+.pelicula-principal .boton {
+	background: rgba(0,0,0, 0.5);
+	border: none;
+	border-radius: 0.31em;
+	padding: 0.93em 1.87em;
+	color: #fff;
+	margin-right: 1.25em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1.12em;
+}
+
+.pelicula-principal .boton:hover {
+	background: #fff;
+	color: #000;
+}
+
+.pelicula-principal .boton i {
+	margin-right: 1.25em;
+}
+
+.pelicula-principal .boton a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+.pelicula-principal .boton a:hover {
+	background: #fff;
+	color: #000;
+}
+
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+.contenedor-titulo-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+	color: #fff;
+	font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+	background: red;
+}
+
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.peliculas-recomendadas, .peliculas-accion, .peliculas-aventuras, .peliculas-ficcion,
+.peliculas-comedia, .peliculas-documental, .peliculas-drama, .peliculas-fantasia, 
+.peliculas-musical, .peliculas-suspenso, .peliculas-terror {
+	margin-bottom: 70px;
+}
+
+.peliculas-recomendadas .contenedor-principal, .peliculas-accion .contenedor-principal,
+.peliculas-aventuras .contenedor-principal, .peliculas-comedia .contenedor-principal, .peliculas-documental .contenedor-principal,
+.peliculas-drama .contenedor-principal, .peliculas-fantasia .contenedor-principal, .peliculas-ficcion .contenedor-principal,
+.peliculas-musical .contenedor-principal, .peliculas-suspenso .contenedor-principal, .peliculas-terror .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda, .peliculas-accion .contenedor-principal .flecha-izquierda,
+.peliculas-aventuras .contenedor-principal .flecha-izquierda, .peliculas-comedia .contenedor-principal .flecha-izquierda,
+.peliculas-documental .contenedor-principal .flecha-izquierda, .peliculas-drama .contenedor-principal .flecha-izquierda,
+.peliculas-fantasia .contenedor-principal .flecha-izquierda, .peliculas-ficcion .contenedor-principal .flecha-izquierda,
+.peliculas-musical .contenedor-principal .flecha-izquierda, .peliculas-suspenso .contenedor-principal .flecha-izquierda,
+.peliculas-terror .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha, .peliculas-accion .contenedor-principal .flecha-derecha,
+.peliculas-aventuras .contenedor-principal .flecha-derecha, .peliculas-comedia .contenedor-principal .flecha-derecha,
+.peliculas-documental .contenedor-principal .flecha-derecha, .peliculas-drama .contenedor-principal .flecha-derecha,
+.peliculas-fantasia .contenedor-principal .flecha-derecha, .peliculas-ficcion .contenedor-principal .flecha-derecha,
+.peliculas-musical .contenedor-principal .flecha-derecha, .peliculas-suspenso .contenedor-principal .flecha-derecha,
+.peliculas-terror .contenedor-principal .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover, .peliculas-accion .contenedor-principal .flecha-izquierda:hover,
+.peliculas-aventuras .contenedor-principal .flecha-izquierda:hover, .peliculas-comedia .contenedor-principal .flecha-izquierda:hover,
+.peliculas-documental .contenedor-principal .flecha-izquierda:hover, .peliculas-drama .contenedor-principal .flecha-izquierda:hover,
+.peliculas-fantasia .contenedor-principal .flecha-izquierda:hover, .peliculas-ficcion .contenedor-principal .flecha-izquierda:hover,
+.peliculas-musical .contenedor-principal .flecha-izquierda:hover, .peliculas-suspenso .contenedor-principal .flecha-izquierda:hover,
+.peliculas-terror .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover, .peliculas-accion .contenedor-principal .flecha-derecha:hover,
+.peliculas-aventuras .contenedor-principal .flecha-derecha:hover, .peliculas-comedia .contenedor-principal .flecha-derecha:hover,
+.peliculas-documental .contenedor-principal .flecha-derecha:hover, .peliculas-drama .contenedor-principal .flecha-derecha:hover,
+.peliculas-fantasia .contenedor-principal .flecha-derecha:hover, .peliculas-ficcion .contenedor-principal .flecha-derecha:hover,
+.peliculas-musical .contenedor-principal .flecha-derecha:hover, .peliculas-suspenso .contenedor-principal .flecha-derecha:hover,
+.peliculas-terror .contenedor-principal .flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda, .peliculas-accion .contenedor-principal .flecha-izquierda,
+.peliculas-aventuras .contenedor-principal .flecha-izquierda, .peliculas-comedia .contenedor-principal .flecha-izquierda,
+.peliculas-documental .contenedor-principal .flecha-izquierda, .peliculas-drama .contenedor-principal .flecha-izquierda,
+.peliculas-fantasia .contenedor-principal .flecha-izquierda, .peliculas-ficcion .contenedor-principal .flecha-izquierda,
+.peliculas-musical .contenedor-principal .flecha-izquierda, .peliculas-suspenso .contenedor-principal .flecha-izquierda,
+.peliculas-terror .contenedor-principal .flecha-izquierda  {
+	left: 0;
+}
+
+.peliculas-recomendadas .contenedor-principal .flecha-derecha, .peliculas-accion .contenedor-principal .flecha-derecha,
+.peliculas-aventuras .contenedor-principal .flecha-derecha, .peliculas-comedia .contenedor-principal .flecha-derecha,
+.peliculas-documental .contenedor-principal .flecha-derecha, .peliculas-drama .contenedor-principal .flecha-derecha,
+.peliculas-fantasia .contenedor-principal .flecha-derecha, .peliculas-ficcion .contenedor-principal .flecha-derecha,
+.peliculas-musical .contenedor-principal .flecha-derecha, .peliculas-suspenso .contenedor-principal .flecha-derecha,
+.peliculas-terror .contenedor-principal .flecha-derecha  {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.peliculas-recomendadas .contenedor-carousel, .peliculas-accion .contenedor-carousel, .peliculas-aventuras .contenedor-carousel,
+.peliculas-comedia .contenedor-carousel, .peliculas-documental .contenedor-carousel, .peliculas-drama .contenedor-carousel,
+.peliculas-fantasia .contenedor-carousel, .peliculas-ficcion .contenedor-carousel, .peliculas-musical .contenedor-carousel,
+.peliculas-suspenso .contenedor-carousel, .peliculas-terror .contenedor-carousel {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel, .peliculas-accion .contenedor-carousel .carousel,
+.peliculas-aventuras .contenedor-carousel .carousel, .peliculas-comedia .contenedor-carousel .carousel,
+.peliculas-documental .contenedor-carousel .carousel, .peliculas-drama .contenedor-carousel .carousel,
+.peliculas-fantasia .contenedor-carousel .carousel, .peliculas-ficcion .contenedor-carousel .carousel,
+.peliculas-musical .contenedor-carousel .carousel, .peliculas-suspenso .contenedor-carousel .carousel,
+.peliculas-terror .contenedor-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula, .peliculas-accion .contenedor-carousel .carousel .pelicula,
+.peliculas-aventuras .contenedor-carousel .carousel .pelicula, .peliculas-comedia .contenedor-carousel .carousel .pelicula,
+.peliculas-documental .contenedor-carousel .carousel .pelicula, .peliculas-drama .contenedor-carousel .carousel .pelicula,
+.peliculas-fantasia .contenedor-carousel .carousel .pelicula, .peliculas-ficcion .contenedor-carousel .carousel .pelicula,
+.peliculas-musical .contenedor-carousel .carousel .pelicula, .peliculas-suspenso .contenedor-carousel .carousel .pelicula,
+.peliculas-terror .contenedor-carousel .carousel .pelicula {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover, .peliculas-accion .contenedor-carousel .carousel .pelicula.hover,
+.peliculas-aventuras .contenedor-carousel .carousel .pelicula.hover, .peliculas-comedia .contenedor-carousel .carousel .pelicula.hover,
+.peliculas-documental .contenedor-carousel .carousel .pelicula.hover, .peliculas-drama .contenedor-carousel .carousel .pelicula.hover,
+.peliculas-fantasia .contenedor-carousel .carousel .pelicula.hover, .peliculas-ficcion .contenedor-carousel .carousel .pelicula.hover,
+.peliculas-musical .contenedor-carousel .carousel .pelicula.hover, .peliculas-suspenso .contenedor-carousel .carousel .pelicula.hover,
+.peliculas-terror .contenedor-carousel .carousel .pelicula.hover  {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img, .peliculas-accion .contenedor-carousel .carousel .pelicula img,
+.peliculas-aventuras .contenedor-carousel .carousel .pelicula img, .peliculas-comedia .contenedor-carousel .carousel .pelicula img,
+.peliculas-documental .contenedor-carousel .carousel .pelicula img, .peliculas-drama .contenedor-carousel .carousel .pelicula img,
+.peliculas-fantasia .contenedor-carousel .carousel .pelicula img, .peliculas-ficcion .contenedor-carousel .carousel .pelicula img,
+.peliculas-musical .contenedor-carousel .carousel .pelicula img, .peliculas-suspenso .contenedor-carousel .carousel .pelicula img,
+.peliculas-terror .contenedor-carousel .carousel .pelicula img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula-principal {
+		font-size: 14px;
+	}
+
+	.pelicula-principal .descripcion {
+		max-width: 100%;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel, .peliculas-accion .contenedor-carousel, .peliculas-aventuras .contenedor-carousel,
+	.peliculas-comedia .contenedor-carousel, .peliculas-documental .contenedor-carousel, .peliculas-drama .contenedor-carousel,
+	.peliculas-fantasia .contenedor-carousel, .peliculas-ficcion .contenedor-carousel, .peliculas-musical .contenedor-carousel,
+	.peliculas-suspenso .contenedor-carousel, .peliculas-terror .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.peliculas-recomendadas .contenedor-carousel .carousel, .peliculas-accion .contenedor-carousel .carousel,
+	.peliculas-aventuras .contenedor-carousel .carousel, .peliculas-comedia .contenedor-carousel .carousel,
+	.peliculas-documental .contenedor-carousel .carousel, .peliculas-drama .contenedor-carousel .carousel, 
+	.peliculas-fantasia .contenedor-carousel .carousel, .peliculas-ficcion .contenedor-carousel .carousel,
+	.peliculas-musical .contenedor-carousel .carousel, .peliculas-suspenso .contenedor-carousel .carousel,
+	.peliculas-terror .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.peliculas-recomendadas .indicadores, .peliculas-accion .indicadores, .peliculas-aventuras .indicadores,
+	.peliculas-comedia .indicadores, .peliculas-documental .indicadores, .peliculas-drama .indicadores,
+	.peliculas-fantasia .indicadores, .peliculas-ficcion .indicadores, .peliculas-musical .indicadores,
+	.peliculas-suspenso .indicadores, .peliculas-terror .indicadores,
+	.peliculas-recomendadas .flecha-izquierda, .peliculas-accion .flecha-izquierda, .peliculas-aventuras .flecha-izquierda,
+	.peliculas-comedia .flecha-izquierda, .peliculas-documental .flecha-izquierda, .peliculas-drama .flecha-izquierda,
+	.peliculas-fantasia .flecha-izquierda, .peliculas-ficcion .flecha-izquierda, .peliculas-musical .flecha-izquierda,
+	.peliculas-suspenso .flecha-izquierda, .peliculas-terror .flecha-izquierda,
+	.peliculas-recomendadas .flecha-derecha, .peliculas-accion .flecha-derecha, .peliculas-aventuras .flecha-derecha,
+	.peliculas-comedia .flecha-derecha, .peliculas-documental .flecha-derecha, .peliculas-drama .flecha-derecha,
+	.peliculas-fantasia .flecha-derecha, .peliculas-ficcion .flecha-derecha, .peliculas-musical .flecha-derecha,
+	.peliculas-suspenso .flecha-derecha, .peliculas-terror .flecha-derecha {
+		display: none;
+	}
+}

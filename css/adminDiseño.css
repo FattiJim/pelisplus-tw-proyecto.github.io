@@ -1,0 +1,348 @@
+
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css);
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #f1f2f7;
+  font-family: "Open Sans", arial, sans-serif;
+  color: rgb(238, 245, 245);
+}
+
+body.login {
+  background-color: white;
+  max-width: 500px;
+  margin: 10vh auto;
+  padding: 1em;
+  height: auto;
+}
+
+.warn {
+  color: rgb(27, 148, 247);
+}
+
+/* header */
+header[role="banner"] {
+  background: rgba(5, 10, 24, 0.966);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+}
+header[role="banner"] h1 {
+  margin: 0;
+  font-weight: 300;
+  padding: 1rem;
+}
+header[role="banner"] h1:before {
+  content: "\f248";
+  font-family: FontAwesome;
+  padding-right: 0.6em;
+  color: rgb(27, 148, 247);
+}
+header[role="banner"] .utilities {
+  width: 100%;
+  background: slategray;
+  color: #ddd;
+}
+header[role="banner"] .utilities li {
+  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+}
+header[role="banner"] .utilities li a {
+  padding: 0.7em;
+  display: block;
+}
+
+/* header */
+.utilities a:before {
+  content: "\f248";
+  font-family: FontAwesome;
+  padding-right: 0.6em;
+
+}
+
+.logout a:before {
+  content: "";
+}
+
+.users a:before {
+  content: "";
+}
+
+nav[role="navigation"] {
+  background: #2a3542;
+  color: #ddd;
+  /* icons */
+}
+nav[role="navigation"] li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+nav[role="navigation"] li a {
+  color: #ddd;
+  text-decoration: none;
+  display: block;
+  padding: 0.7em;
+}
+nav[role="navigation"] li a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+nav[role="navigation"] li a:before {
+  content: "\f248";
+  font-family: FontAwesome;
+  padding-right: 0.6em;
+}
+nav[role="navigation"] .dashboard a:before {
+  content: "";
+}
+nav[role="navigation"] .write a:before {
+  content: "";
+}
+nav[role="navigation"] .edit a:before {
+  content: "";
+}
+nav[role="navigation"] .comments a:before {
+  content: "";
+}
+nav[role="navigation"] .users a:before {
+  content: "";
+}
+
+
+
+footer[role="contentinfo"] {
+  background: slategray;
+  color: #ddd;
+  font-size: 0.8em;
+  text-align: center;
+  padding: 0.2em;
+}
+
+/* panels */
+.panel {
+  background-color: white;
+  color: darkslategray;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  border-radius: 0.3rem;
+  margin: 1%;
+}
+.panel > ul {
+  margin: 1rem;
+}
+
+/* typography */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+/* lists */
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+main li {
+  position: relative;
+  padding-left: 1.2em;
+  margin: 0.5em 0;
+}
+main li:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0.3em;
+  border-left: solid 10px #dde;
+  border-top: solid 5px transparent;
+  border-bottom: solid 5px transparent;
+}
+
+
+@media screen and (min-width: 600px) {
+  html,
+  body {
+    height: 100%;
+  }
+
+  header[role="banner"] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    height: 75px;
+  }
+  header[role="banner"] .utilities {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    color: darkslategray;
+    width: auto;
+  }
+  header[role="banner"] .utilities li {
+    display: inline-block;
+  }
+  header[role="banner"] .utilities li a {
+    padding: 0.5em 1em;
+  }
+
+  nav[role="navigation"] {
+    position: fixed;
+    width: 200px;
+    top: 75px;
+    bottom: 0px;
+    left: 0px;
+  }
+
+  main[role="main"] {
+    margin: 75px 0 40px 200px;
+  }
+  
+
+  .panel {
+    margin: 2% 0 0 2%;
+    float: left;
+    width: 96%;
+  }
+  .panel:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  footer[role="contentinfo"] {
+    clear: both;
+    margin-left: 200px;
+  }
+}
+@media screen and (min-width: 900px) {
+  footer[role="contentinfo"] {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0px;
+    margin: 0;
+  }
+
+  .panel {
+    width: 47%;
+    clear: none;
+  }
+  .panel.important {
+    width: 96%;
+  }
+
+  .grids {
+    max-width: 140rem;
+    margin: 70px 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  
+  }
+  
+}
+
+
+.card { 
+  position:relative;
+  height: 80%;
+  width: 90%;
+  transition: all ease-in-out 400ms;
+  cursor: pointer;
+}
+
+/*movimiento*/
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card:active {
+  transform: translateY(-1px);
+}
+
+.card__side {
+  transition: all 0.8s ease;
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  top: 10px;
+  left: 22px;
+  height: 25rem;
+  backface-visibility: hidden;
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+}
+
+.card__side--front {
+  background-color: #2196f3;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.text-box-top {
+  font-size: 2.2rem;
+  text-shadow: 2px 2px 10px #0000006c;
+  font-weight: 400;
+}
+
+.text-box-middle {
+  font-size: 5.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 10px #0000006c;
+}
+
+.text-box-lower {
+  font-size: 2rem;
+  text-shadow: 2px 2px 10px #0000006c;
+  font-weight: 400;
+}
+
+.heading {
+  transition: all 0.6s linear;
+}
+
+#front-3 {
+    background-image: linear-gradient(
+        rgba(84, 86, 175, 0.9),
+        rgba(27, 27, 85, 0.9)
+      ),
+      url("https://cdn.forbes.com.mx/2021/09/Jumanji-hbo-max-640x360.jpg");
+  }
+  
+  #front-4 {
+    background-image: linear-gradient(
+        rgba(31, 136, 168, 0.767),
+        rgba(14, 46, 65, 0.9)
+      ),
+      url("https://static3.abc.es/media/play/2021/08/15/stra-ktEF--620x349@abc.jpg");
+  }
+  
+
+
+
